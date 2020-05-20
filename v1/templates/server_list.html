@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block conten %}
+    <h1>服务器列表</h1>
+    <a href="{% url 'server_add' %}" class="btn btn-primary" style="margin: 10px 0;">添加数据</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>主机名</th>
+            <th>ip地址</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for server in server_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ server.hostname }}</td>
+                <td>{{ server.ip }}</td>
+                <td>
+                    <a href="{% url 'server_edit' edit_id=server.pk %}">操作</a>
+                    <a href="#" onclick="removeData(this,{{ server.pk }})">删除</a>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        function removeData(ths, deleteId) {
+            var res = confirm('你确定删除吗？');
+            if (res) {
+                $.ajax({
+                        'url': '/server_delete/' + deleteId + '/',
+                        type: 'get',
+                        success: function (args) {
+                            if (args.status) {
+                                $(ths).parent().parent().remove()
+                            }
+                        }
+                    }
+                )
+            }
+        }
+
+    </script>
+{% endblock %}

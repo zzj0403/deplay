@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block conten %}
+    <h1>发布任务：{{ project_obj.title }}-{{ project_obj.get_env_display }}</h1>
+    <hr>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>唯一标识</th>
+            <th>状态</th>
+            {#            <th>操作</th>#}
+        </tr>
+        </thead>
+        <tbody>
+        {% for task_obj in task_list %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ task_obj.uid }}</td>
+                <td>{{ task_obj.get_status_display }}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}
