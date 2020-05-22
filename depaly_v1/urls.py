@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^project/delete/(?P<delete_id>\d+)/$', project.project_delete, name='project_delete'),
 
     # 发布任务相关
-    url(r'^task_list/(?P<project_id>\d+)/$',task.task_list,name='task_list')
+    url(r'^task_list/(?P<project_id>\d+)/$',task.task_list,name='task_list'),
+    url(r'^task_add/(?P<project_id>\d+)/$',task.task_add,name='task_add')
 
 ]

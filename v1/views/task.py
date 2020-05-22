@@ -7,4 +7,27 @@ from v1.myforms.task import TaskModelForm
 def task_list(request, project_id):
     task_list = models.DeployTask.objects.filter(project_id=project_id)
     project_obj = models.Project.objects.filter(pk=project_id).first()
-    return render(request,'task_list.html',locals())
+    return render(request, 'task_list.html', locals())
+
+
+def task_add(request, project_id):
+    all_form_obj = TaskModelForm(project_id=project_id)
+    project_obj = models.Project.objects.filter(pk=project_id).first()
+    if request.method == 'POST':
+        form_obj = TaskModelForm(data=request.POST, project_id=project_id)
+        if form_obj.is_valid():
+            # 错误
+            """
+            (1048, "Column 'project_id' cannot be null")
+            """
+            # 解决反法
+            # 1 直接手动写
+            # form_obj.instance #当前数据对象
+            # form_obj.instance.uid = 'zzz'
+            # form_obj.instance.project_id = project_id
+            # 2 重写save 方法
+
+            form_obj.save()
+            _url = reverse('task_list', args=(project_id,))
+            return redirect(_url)
+    return render(request, 'task_from.html', locals())

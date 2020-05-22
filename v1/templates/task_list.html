@@ -3,6 +3,7 @@
 {% block conten %}
     <h1>发布任务：{{ project_obj.title }}-{{ project_obj.get_env_display }}</h1>
     <hr>
+    <a href="{% url 'task_add' project_id=project_id %}" class="btn btn-success">添加</a>
     <table class="table table-striped table-hover">
         <thead>
         <tr>

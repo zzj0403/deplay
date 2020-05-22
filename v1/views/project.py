@@ -20,13 +20,14 @@ def project_add(request):
 
 
 def project_edit(request, edit_id):
-    edit_server = models.Server.objects.filter(pk=edit_id).first()
-    all_form_obj = ProjectModelForm(instance=edit_server)
-    if request.method == 'POST':
-        form_obj = ProjectModelForm(data=request.POST, instance=all_form_obj)
-        if form_obj.is_valid():
-            form_obj.save()  # 有无instance参数来判断到底是新增数据还是编辑数据
-            return redirect('project_add')
+    edit_obj = models.Project.objects.filter(pk=edit_id).first()
+    all_form_obj = ProjectModelForm(instance=edit_obj)
+
+    if request.method == "POST":
+        from_obj = ProjectModelForm(request.POST, instance=edit_obj)
+        if from_obj.is_valid():
+            from_obj.save()
+            return redirect('project_list')
     return render(request, 'from.html', locals())
 
 

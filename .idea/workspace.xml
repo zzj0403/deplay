@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbdba132-ea93-48be-86c2-413e1965b99d" name="Default Changelist" comment="" />
+    <list default="true" id="dbdba132-ea93-48be-86c2-413e1965b99d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/v1/templates/task_from.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/depaly_v1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/depaly_v1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depaly_v1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/depaly_v1/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/myforms/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/myforms/task.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/templates/task_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/v1/templates/task_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/views/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/views/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/views/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/views/task.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,24 +46,27 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1c4XUsV8z62r0t4vKPQ3aSNRaVd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/v1/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../代码发布直播课day02/代码/zm6_deploy_real" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -44,7 +75,7 @@
       <recent name="D:\code\py\depaly_v1\v1" />
     </key>
   </component>
-  <component name="RunManager" selected="Django server.depaly_v1">
+  <component name="RunManager" selected="Django Server.depaly_v1">
     <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="depaly_v1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,40 +144,58 @@
       <workItem from="1589940818743" duration="1529000" />
       <workItem from="1589942369406" duration="64000" />
       <workItem from="1589942460012" duration="15782000" />
+      <workItem from="1590025578436" duration="270000" />
+      <workItem from="1590025933643" duration="38000" />
+      <workItem from="1590026180519" duration="77000" />
+      <workItem from="1590030908700" duration="131000" />
+      <workItem from="1590049278027" duration="231000" />
+      <workItem from="1590128075767" duration="8971000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="391" y="0" width="598" height="728" key="#depaly_v1" timestamp="1589876595975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="391" y="0" width="598" height="728" key="#depaly_v1/0.0.1366.728@0.0.1366.728" timestamp="1589876595975" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1589941056981">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1590132368272">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589941056981" />
-    <state width="982" height="170" key="GridCell.Tab.0.bottom" timestamp="1589970681491">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590132368272" />
+    <state width="1097" height="155" key="GridCell.Tab.0.bottom" timestamp="1590143456736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="982" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589970681491" />
+    <state width="1097" height="155" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590143456736" />
     <state width="1437" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589795343878" />
-    <state width="982" height="170" key="GridCell.Tab.0.center" timestamp="1589970681491">
+    <state width="1097" height="155" key="GridCell.Tab.0.center" timestamp="1590143456736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="982" height="170" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589970681491" />
+    <state width="1097" height="155" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590143456736" />
     <state width="1437" height="237" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589795343878" />
-    <state width="982" height="170" key="GridCell.Tab.0.left" timestamp="1589970681491">
+    <state width="1097" height="155" key="GridCell.Tab.0.left" timestamp="1590143456736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="982" height="170" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589970681491" />
+    <state width="1097" height="155" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590143456736" />
     <state width="1437" height="237" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589795343878" />
-    <state width="982" height="170" key="GridCell.Tab.0.right" timestamp="1589970681491">
+    <state width="1097" height="155" key="GridCell.Tab.0.right" timestamp="1590143456736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="982" height="170" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589970681491" />
+    <state width="1097" height="155" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590143456736" />
     <state width="1437" height="237" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589795343878" />
     <state width="1323" height="213" key="GridCell.Tab.1.bottom" timestamp="1589942647780">
       <screen x="0" y="0" width="1366" height="728" />
@@ -164,14 +213,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="213" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589942647780" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1589942341664">
+    <state x="184" y="6" key="SettingsEditor" timestamp="1590049309834">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589942341664" />
-    <state x="525" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1589940834885">
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590049309834" />
+    <state x="525" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1590026255721">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="525" y="184" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589940834885" />
+    <state x="525" y="184" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590026255721" />
+    <state x="42" y="0" width="596" height="728" key="find.popup" timestamp="1590130690357">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="42" y="0" width="596" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1590130690357" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1589941550011">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
