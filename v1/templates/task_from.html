@@ -80,120 +80,165 @@
         </tbody>
     </table>
     {#    2. 任务表单基本配置#}
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span>基本配置</h3>
-        </div>
-        <div class="panel-body">
-            <div class="from-horizontal"></div>
-            <label for="{{ all_form_obj.tag.id_for_label }}"
-                   class="col-md-1 control-label">{{ all_form_obj.tag.label }}</label>
-            <div class="col-md-11">
-                {{ all_form_obj.tag }}
-                <span style=" color:red ">{{ all_form_obj.errors.0 }}</span>
+
+    <form action="" method="post">
+    {% csrf_token %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span>基本配置</h3>
             </div>
-        </div>
-    </div>
-    {#    3. 钩子脚本渲染#}
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><span class="glyphicon glyphicon-tasks"></span>发布流程&钩子</h3>
-        </div>
-        <div class="panel-body">
-            <div class="outline">
-                <div class="series">
-                    <div class="module clearfix">
-                        <div class="item left">
-                            <div class="line">
-                                <hr>
-                            </div>
-                            <div class="icon">
-                                <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-                                <a class="down">01 开始</a>
-                            </div>
-                        </div>
-
-                        <div class="item left active">
-                            <div class="line">
-                                <hr>
-                            </div>
-                            <div class="icon">
-                                <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-                                <a class="up">02 下载前</a>
-                            </div>
-                        </div>
-                        <div class="item left">
-                            <div class="line">
-                                <hr>
-                            </div>
-                            <div class="icon">
-                                <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-                                <a class="down">03 下载代码</a>
-                            </div>
-                        </div>
-
-                        <div class="item left active">
-                            <div class="line">
-                                <hr>
-                            </div>
-                            <div class="icon">
-                                <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-                                <a class="up">04 下载后</a>
-                            </div>
-                        </div>
-
-                        <div class="item left">
-                            <div class="line">
-                                <hr>
-                            </div>
-                            <div class="icon">
-                                <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-                                <a class="down">05 打包上传</a>
-                            </div>
-                        </div>
-
-                        <div class="item left active">
-                            <div class="line">
-                                <hr>
-                            </div>
-                            <div class="icon">
-                                <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-                                <a class="up">06 发布前</a>
-                            </div>
-                        </div>
-
-                        <div class="item left">
-                            <div class="line">
-                                <hr>
-                            </div>
-                            <div class="icon">
-                                <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-                                <a class="down">07 发布</a>
-                            </div>
-                        </div>
-
-                        <div class="item left active">
-                            <div class="line">
-                                <hr>
-                            </div>
-                            <div class="icon">
-                                <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
-                                <a class="up">08 发布后</a>
-                            </div>
-                        </div>
-                        <div class="item left">
-                            <div class="line">
-                                <hr>
-                            </div>
-                        </div>
-
-                    </div>
+            <div class="panel-body">
+                <div class="from-horizontal"></div>
+                <label for="{{ all_form_obj.tag.id_for_label }}"
+                       class="col-md-1 control-label">{{ all_form_obj.tag.label }}</label>
+                <div class="col-md-11">
+                    {{ all_form_obj.tag }}
+                    <span style=" color:red ">{{ all_form_obj.errors.0 }}</span>
                 </div>
             </div>
-
-            
         </div>
-    </div>
+        {#    3. 钩子脚本渲染#}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-tasks"></span>发布流程&钩子</h3>
+            </div>
+            <div class="panel-body">
+                <div class="outline">
+                    <div class="series">
+                        <div class="module clearfix">
+                            <div class="item left">
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <div class="icon">
+                                    <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+                                    <a class="down">01 开始</a>
+                                </div>
+                            </div>
+
+                            <div class="item left active">
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <div class="icon">
+                                    <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+                                    <a class="up">02 下载前</a>
+                                </div>
+                            </div>
+                            <div class="item left">
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <div class="icon">
+                                    <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+                                    <a class="down">03 下载代码</a>
+                                </div>
+                            </div>
+
+                            <div class="item left active">
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <div class="icon">
+                                    <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+                                    <a class="up">04 下载后</a>
+                                </div>
+                            </div>
+
+                            <div class="item left">
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <div class="icon">
+                                    <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+                                    <a class="down">05 打包上传</a>
+                                </div>
+                            </div>
+
+                            <div class="item left active">
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <div class="icon">
+                                    <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+                                    <a class="up">06 发布前</a>
+                                </div>
+                            </div>
+
+                            <div class="item left">
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <div class="icon">
+                                    <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+                                    <a class="down">07 发布</a>
+                                </div>
+                            </div>
+
+                            <div class="item left active">
+                                <div class="line">
+                                    <hr>
+                                </div>
+                                <div class="icon">
+                                    <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+                                    <a class="up">08 发布后</a>
+                                </div>
+                            </div>
+                            <div class="item left">
+                                <div class="line">
+                                    <hr>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="hooks">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span>02下载前</h3>
+                            </div>
+                            <div class="panel-body">
+                                {{ all_form_obj.before_download_script }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span>04下载后</h3>
+                            </div>
+                            <div class="panel-body">
+                                {{ all_form_obj.after_download_script }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span>06发布前</h3>
+                            </div>
+                            <div class="panel-body">
+                                {{ all_form_obj.before_download_script }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span>08发布后</h3>
+                            </div>
+                            <div class="panel-body">
+                                {{ all_form_obj.before_deploy_script }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
+            </div>
+        </div>
+        <input type="submit" class="btn btn-success">
+    </form>
 {% endblock %}

@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbdba132-ea93-48be-86c2-413e1965b99d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/v1/templates/task_from.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/depaly_v1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/depaly_v1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/depaly_v1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/depaly_v1/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/v1/myforms/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/myforms/task.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/templates/task_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/v1/templates/task_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/views/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/views/project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/templates/task_from.html" beforeDir="false" afterPath="$PROJECT_DIR$/v1/templates/task_from.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/v1/views/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/views/task.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +54,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../代码发布直播课day02/代码/zm6_deploy_real" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -150,6 +145,7 @@
       <workItem from="1590030908700" duration="131000" />
       <workItem from="1590049278027" duration="231000" />
       <workItem from="1590128075767" duration="8971000" />
+      <workItem from="1590373716446" duration="9992000" />
     </task>
     <servers />
   </component>

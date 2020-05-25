@@ -2,6 +2,7 @@ from v1.myforms.base import BaseModelForm
 from v1 import models
 import datetime
 from django import forms
+import datetime
 
 
 class TaskModelForm1(BaseModelForm):
@@ -138,11 +139,18 @@ class TaskModelForm(BaseModelForm):
         fields = '__all__'
         exclude = ['uid', 'project', 'status']
 
-    def __init__(self, project_id, *args, **kwargs):
+    def __init__(self, project_obj, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.project_id = project_id
+        self.project_obj = project_obj
+
+    def create_uid(self):
+        title = self.project_obj.title
+        env = self.project_obj.env
+        tag = self.cleaned_data.get('tag')
+        date = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
+        return '%s-%s-%s-%s' % (title, env, tag, date)
 
     def save(self, commit=True):
-        self.instance.uid = 'zzz'
-        self.instance.project_id = self.project_id
+        self.instance.uid = self.create_uid()
+        self.instance.project_id = self.project_obj.pk
         super().save(commit=True)

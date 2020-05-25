@@ -11,10 +11,11 @@ def task_list(request, project_id):
 
 
 def task_add(request, project_id):
-    all_form_obj = TaskModelForm(project_id=project_id)
+
     project_obj = models.Project.objects.filter(pk=project_id).first()
+    all_form_obj = TaskModelForm(project_obj=project_obj)
     if request.method == 'POST':
-        form_obj = TaskModelForm(data=request.POST, project_id=project_id)
+        form_obj = TaskModelForm(data=request.POST, project_obj=project_obj)
         if form_obj.is_valid():
             # 错误
             """
