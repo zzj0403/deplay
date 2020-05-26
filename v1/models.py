@@ -38,8 +38,7 @@ class Project(models.Model):
 
 
 class DeployTask(models.Model):
-
-    uid = models.CharField(verbose_name='标识',max_length=64)
+    uid = models.CharField(verbose_name='标识', max_length=64)
 
     project = models.ForeignKey(verbose_name='项目', to="Project")
     tag = models.CharField(verbose_name='版本', max_length=32)
@@ -56,3 +55,17 @@ class DeployTask(models.Model):
     after_download_script = models.TextField(verbose_name='下载后脚本', null=True, blank=True)
     before_deploy_script = models.TextField(verbose_name='发布前脚本', null=True, blank=True)
     after_deploy_script = models.TextField(verbose_name='发布后脚本', null=True, blank=True)
+
+
+class HookTemplate(models.Model):
+    """钩子脚本"""
+    title = models.CharField(max_length=32, verbose_name='标题')
+    content = models.TextField(verbose_name='脚本内容')
+    # 针对不同阶段的钩子 做区分
+    hook_type_choices = (
+        (2, '下载前'),
+        (4, '下载后'),
+        (6, '发布前'),
+        (8, '发布后'),
+    )
+    hook_type = models.IntegerField(verbose_name='钩子类型', choices=hook_type_choices)

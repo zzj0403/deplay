@@ -82,7 +82,7 @@
     {#    2. 任务表单基本配置#}
 
     <form action="" method="post">
-    {% csrf_token %}
+        {% csrf_token %}
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span>基本配置</h3>
@@ -200,7 +200,34 @@
                                 <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span>02下载前</h3>
                             </div>
                             <div class="panel-body">
-                                {{ all_form_obj.before_download_script }}
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            {{ all_form_obj.before_download_select }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <div class="col-md-12">
+                                            {{ all_form_obj.before_download_script }}
+
+                                            <span style="color: red">{{ all_form_obj.before_download_script.error.0 }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <div class="checkbox">
+                                                <label for="">{{ all_form_obj.before_download_template }}保存为模版</label>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            {{ all_form_obj.before_download_title }}
+                                            <span style="color: red">{{ all_form_obj.before_download_title.error.0 }}</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -210,7 +237,33 @@
                                 <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span>04下载后</h3>
                             </div>
                             <div class="panel-body">
-                                {{ all_form_obj.after_download_script }}
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            {{ all_form_obj.after_download_select }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <div class="col-md-12">
+                                            {{ all_form_obj.after_download_script }}
+
+                                            <span style="color: red">{{ all_form_obj.after_download_script.error.0 }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <div class="checkbox">
+                                                <label for="">{{ all_form_obj.after_download_template }}保存为模版</label>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            {{ all_form_obj.after_download_title }}
+                                            <span style="color: red">{{ all_form_obj.after_download_title.error.0 }}</span>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -220,7 +273,33 @@
                                 <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span>06发布前</h3>
                             </div>
                             <div class="panel-body">
-                                {{ all_form_obj.before_download_script }}
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            {{ all_form_obj.before_deploy_select }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <div class="col-md-12">
+                                            {{ all_form_obj.before_deploy_script }}
+
+                                            <span style="color: red">{{ all_form_obj.before_deploy_script.error.0 }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <div class="checkbox">
+                                                <label for="">{{ all_form_obj.before_deploy_template }}保存为模版</label>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            {{ all_form_obj.before_deploy_title }}
+                                            <span style="color: red">{{ all_form_obj.before_deploy_title.error.0 }}</span>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -230,7 +309,33 @@
                                 <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span>08发布后</h3>
                             </div>
                             <div class="panel-body">
-                                {{ all_form_obj.before_deploy_script }}
+                                <div class="form-horizontal">
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            {{ all_form_obj.after_deploy_select }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <div class="col-md-12">
+                                            {{ all_form_obj.after_deploy_script }}
+
+                                            <span style="color: red">{{ all_form_obj.after_deploy_script.error.0 }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <div class="checkbox">
+                                                <label for="">{{ all_form_obj.after_deploy_template }}保存为模版</label>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            {{ all_form_obj.after_deploy_title }}
+                                            <span style="color: red">{{ all_form_obj.after_deploy_title.error.0 }}</span>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -241,4 +346,22 @@
         </div>
         <input type="submit" class="btn btn-success">
     </form>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $('.hooks').find('select').change(function () {
+            var that = $(this)
+            $.ajax({
+                url: '/hook/template/' + $(this).val() + '/',
+                type: 'get',
+                success: function (args) {
+                    {#alert(args.content)#}
+                    //将脚本内容放入select中
+                    that.parent().parent().next().find('textarea').val(args.content)
+
+                }
+            })
+        })
+    </script>
 {% endblock %}

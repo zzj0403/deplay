@@ -134,6 +134,29 @@ class TaskModelForm1(BaseModelForm):
 
 
 class TaskModelForm(BaseModelForm):
+    # 每个钩子都需要
+    exclude_bootstrap = [
+        'before_download_template',
+        'after_download_template',
+        'before_deploy_template',
+        'after_deploy_template'
+    ]
+    before_download_select = forms.ChoiceField(required=False, label='下载前')
+    before_download_title = forms.CharField(required=False, label='模板名称')
+    before_download_template = forms.BooleanField(required=False, widget=forms.CheckboxInput, label='是否保存为模板')
+
+    after_download_select = forms.ChoiceField(required=False, label='下载后')
+    after_download_title = forms.CharField(required=False, label='模板名称')
+    after_download_template = forms.BooleanField(required=False, widget=forms.CheckboxInput, label='是否保存为模板')
+
+    before_deploy_select = forms.ChoiceField(required=False, label='发布前')
+    before_deploy_title = forms.CharField(required=False, label='模板名称')
+    before_deploy_template = forms.BooleanField(required=False, widget=forms.CheckboxInput, label='是否保存为模板')
+
+    after_deploy_select = forms.ChoiceField(required=False, label='下载后')
+    after_deploy_title = forms.CharField(required=False, label='模板名称')
+    after_deploy_template = forms.BooleanField(required=False, widget=forms.CheckboxInput, label='是否保存为模板')
+
     class Meta:
         model = models.DeployTask
         fields = '__all__'
@@ -142,15 +165,62 @@ class TaskModelForm(BaseModelForm):
     def __init__(self, project_obj, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.project_obj = project_obj
+        self.init_hook()
+
+    def init_hook(self):
+        before_download = [(0, '请选择'), ]
+        # 2 再去钩子模版表中 查询对应类型的钩子数据
+        extra_download = models.HookTemplate.objects.filter(hook_type=2).values_list('id', 'title')
+        before_download.extend(extra_download)
+        self.fields['before_download_select'].choices = before_download
+
+        after_download = [(0, '请选择')]
+        extra_download = models.HookTemplate.objects.filter(hook_type=4).values_list('id', 'title')
+        after_download.extend(extra_download)
+        self.fields['after_download_select'].choices = after_download
+
+        before_deploy = [(0, '请选择')]
+        extra_download = models.HookTemplate.objects.filter(hook_type=6).values_list('id', 'title')
+        before_deploy.extend(extra_download)
+        self.fields['before_deploy_select'].choices = before_deploy
+
+        after_deploy = [(0, '请选择')]
+        extra_download = models.HookTemplate.objects.filter(hook_type=8).values_list('id', 'title')
+        after_deploy.extend(extra_download)
+        self.fields['after_deploy_select'].choices = after_deploy
 
     def create_uid(self):
         title = self.project_obj.title
         env = self.project_obj.env
         tag = self.cleaned_data.get('tag')
-        date = datetime.datetime.now().strftime('%Y%m%d%H%M%S')
-        return '%s-%s-%s-%s' % (title, env, tag, date)
+        date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        return '%s_%s_%s_%s' % (title, env, tag, date)
 
     def save(self, commit=True):
         self.instance.uid = self.create_uid()
         self.instance.project_id = self.project_obj.pk
         super().save(commit=True)
+
+        if self.cleaned_data.get('before_download_template'):
+            title = self.cleaned_data.get("before_download_title")
+            content = self.cleaned_data.get("before_download_script")
+            # 直接保存到钩子脚本模型表中
+            models.HookTemplate.objects.create(title=title, content=content, hook_type=2)
+
+        if self.cleaned_data.get('after_download_template'):
+            title = self.cleaned_data.get("after_download_title")
+            content = self.cleaned_data.get("after_download_script")
+            # 直接保存到钩子脚本模型表中
+            models.HookTemplate.objects.create(title=title, content=content, hook_type=4)
+
+        if self.cleaned_data.get('before_deploy_template'):
+            title = self.cleaned_data.get("before_deploy_title")
+            content = self.cleaned_data.get("before_deploy_script")
+            # 直接保存到钩子脚本模型表中
+            models.HookTemplate.objects.create(title=title, content=content, hook_type=6)
+
+        if self.cleaned_data.get('after_deploy_template'):
+            title = self.cleaned_data.get("after_deploy_title")
+            content = self.cleaned_data.get("after_deploy_script")
+            # 直接保存到钩子脚本模型表中
+            models.HookTemplate.objects.create(title=title, content=content, hook_type=8)

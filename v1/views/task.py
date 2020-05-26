@@ -11,7 +11,6 @@ def task_list(request, project_id):
 
 
 def task_add(request, project_id):
-
     project_obj = models.Project.objects.filter(pk=project_id).first()
     all_form_obj = TaskModelForm(project_obj=project_obj)
     if request.method == 'POST':
@@ -32,3 +31,11 @@ def task_add(request, project_id):
             _url = reverse('task_list', args=(project_id,))
             return redirect(_url)
     return render(request, 'task_from.html', locals())
+
+
+def hook_template(request, hook_id):
+    hook_obj = models.HookTemplate.objects.filter(pk=hook_id).first()
+    back_dic = {'status':True,'content':''}
+    back_dic['content'] = hook_obj.content
+    return JsonResponse(back_dic)
+

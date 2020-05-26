@@ -10,5 +10,5 @@ if __name__ == "__main__":
 
 
     from v1 import models
-    edit_server=models.Server.objects.filter(pk=1).first()
-    print(edit_server)
+    hook_obj = models.HookTemplate.objects.filter(pk=21).first()
+    print(hook_obj)
