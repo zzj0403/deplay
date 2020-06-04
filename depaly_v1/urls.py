@@ -35,6 +35,7 @@ urlpatterns = [
     url(r'^task_list/(?P<project_id>\d+)/$',task.task_list,name='task_list'),
     url(r'^task_add/(?P<project_id>\d+)/$',task.task_add,name='task_add'),
 
+    url(r'^deploy/task/(?P<task_id>\d+)/$',task.deploy_task,name='deploy_task'),
     # 获取脚本内容
     url(r'^hook/template/(?P<hook_id>\d+)/$',task.hook_template,name='hook_template')
 

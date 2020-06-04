@@ -35,7 +35,15 @@ def task_add(request, project_id):
 
 def hook_template(request, hook_id):
     hook_obj = models.HookTemplate.objects.filter(pk=hook_id).first()
-    back_dic = {'status':True,'content':''}
+    back_dic = {'status': True, 'content': ''}
     back_dic['content'] = hook_obj.content
     return JsonResponse(back_dic)
+
+
+def deploy_task(request, task_id):
+    # 查询当前任务对象及当前对应的项目对象
+    task_obj = models.DeployTask.objects.filter(pk=task_id).first()
+    project_obj = task_obj.project
+    return render(request,'deploy.html',locals())
+
 

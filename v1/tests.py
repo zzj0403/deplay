@@ -10,5 +10,6 @@ if __name__ == "__main__":
 
 
     from v1 import models
-    hook_obj = models.HookTemplate.objects.filter(pk=21).first()
-    print(hook_obj)
+    task_obj = models.DeployTask.objects.filter(pk=13).first()
+    project_obj = task_obj.project
+    print(project_obj)

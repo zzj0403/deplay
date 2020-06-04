@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'v1',
+    'channels'
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,13 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'depaly_v1.urls'
+
+ASGI_APPLICATION = 'depaly_v1.routing.application'
+CHANNEL_LAYERS = {
+    'default':{
+        'BACKEND':'channels.layers.InMemoryChannelLayer'
+    }
+}
 
 TEMPLATES = [
     {

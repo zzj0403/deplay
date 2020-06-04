@@ -10,7 +10,7 @@
             <th>ID</th>
             <th>唯一标识</th>
             <th>状态</th>
-            {#            <th>操作</th>#}
+            <th>操作</th>
         </tr>
         </thead>
         <tbody>
@@ -19,6 +19,9 @@
                 <td>{{ forloop.counter }}</td>
                 <td>{{ task_obj.uid }}</td>
                 <td>{{ task_obj.get_status_display }}</td>
+                <td>
+                    <a href="{% url 'deploy_task' task_id=task_obj.pk %}">发布</a>
+                </td>
             </tr>
         {% endfor %}
 
