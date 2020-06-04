@@ -20,23 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbdba132-ea93-48be-86c2-413e1965b99d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/depaly_v1/routing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v1/consumers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v1/migrations/0002_node.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v1/static/js/go.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/v1/templates/deploy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/depaly_v1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/depaly_v1/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/depaly_v1/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/depaly_v1/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/consumers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/v1/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/migrations/0002_project.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/migrations/0003_auto_20200520_1445.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/migrations/0004_deploytask.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/migrations/0005_hooktemplate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/migrations/0002_node.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/v1/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/templates/task_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/v1/templates/task_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v1/views/task.py" beforeDir="false" afterPath="$PROJECT_DIR$/v1/views/task.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v1/templates/deploy.html" beforeDir="false" afterPath="$PROJECT_DIR$/v1/templates/deploy.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +58,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../视频/代码发布直播课day02/代码/zm6_deploy_real" />
+    <property name="last_opened_file_path" value="H:/视频文件/代码发布直播课day02/代码/zm6_deploy_real" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -77,7 +66,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -86,7 +75,7 @@
       <recent name="D:\code\py\depaly_v1\v1\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.depaly_v1">
+  <component name="RunManager" selected="Django server.depaly_v1">
     <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="depaly_v1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,53 +157,57 @@
       <workItem from="1590993610438" duration="350000" />
       <workItem from="1590993981584" duration="4353000" />
       <workItem from="1591235454565" duration="13868000" />
+      <workItem from="1591269061522" duration="152000" />
+      <workItem from="1591271195257" duration="14954000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="391" y="0" width="598" height="728" key="#depaly_v1" timestamp="1589876595975">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="391" y="0" width="598" height="728" key="#depaly_v1/0.0.1366.728@0.0.1366.728" timestamp="1589876595975" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1591235899122">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="651" y="170" key="FileChooserDialogImpl" timestamp="1591287204468">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1591235899121" />
-    <state width="1133" height="248" key="GridCell.Tab.0.bottom" timestamp="1591263763581">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="651" y="170" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591287204468" />
+    <state width="1147" height="184" key="GridCell.Tab.0.bottom" timestamp="1591291792468">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1133" height="248" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591263763581" />
-    <state width="1437" height="237" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589795343878" />
-    <state width="1133" height="248" key="GridCell.Tab.0.center" timestamp="1591263763581">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1147" height="184" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591291792468" />
+    <state width="1147" height="184" key="GridCell.Tab.0.center" timestamp="1591291792467">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1133" height="248" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591263763581" />
-    <state width="1437" height="237" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589795343878" />
-    <state width="1133" height="248" key="GridCell.Tab.0.left" timestamp="1591263763581">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1147" height="184" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591291792467" />
+    <state width="1147" height="184" key="GridCell.Tab.0.left" timestamp="1591291792467">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1133" height="248" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591263763581" />
-    <state width="1437" height="237" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589795343878" />
-    <state width="1133" height="248" key="GridCell.Tab.0.right" timestamp="1591263763581">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1147" height="184" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591291792467" />
+    <state width="1147" height="184" key="GridCell.Tab.0.right" timestamp="1591291792468">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1133" height="248" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591263763581" />
-    <state width="1437" height="237" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589795343878" />
+    <state width="1147" height="184" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591291792468" />
     <state width="1323" height="213" key="GridCell.Tab.1.bottom" timestamp="1589942647780">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -231,14 +224,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="213" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589942647780" />
-    <state x="184" y="6" key="SettingsEditor" timestamp="1590477714000">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="259" y="9" key="SettingsEditor" timestamp="1591269122437">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590477714000" />
-    <state x="525" y="184" key="com.intellij.ide.util.TipDialog" timestamp="1590026255721">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="259" y="9" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591269122437" />
+    <state x="738" y="263" key="com.intellij.ide.util.TipDialog" timestamp="1591271198040">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="525" y="184" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590026255721" />
+    <state x="738" y="263" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591271198040" />
     <state x="42" y="0" width="596" height="728" key="find.popup" timestamp="1590130690357">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

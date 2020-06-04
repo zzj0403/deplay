@@ -79,5 +79,6 @@ class Node(models.Model):
         ('green', '成功'),
         ('red', '失败'),
     ]
+    status = models.CharField(verbose_name='状态',max_length=16,choices=status_choices,default='lightgray')
     parent = models.ForeignKey(verbose_name='父节点',to='self',null=True,blank=True)
     server = models.ForeignKey(verbose_name='父节点',to='Server',null=True,blank=True)
