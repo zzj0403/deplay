@@ -193,7 +193,7 @@ class TaskModelForm(BaseModelForm):
         title = self.project_obj.title
         env = self.project_obj.env
         tag = self.cleaned_data.get('tag')
-        date = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        date = datetime.datetime.now().strftime('%Y-%m-%d_%H_%M_%S')
         return '%s_%s_%s_%s' % (title, env, tag, date)
 
     def save(self, commit=True):

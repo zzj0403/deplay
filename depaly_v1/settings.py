@@ -53,8 +53,8 @@ ROOT_URLCONF = 'depaly_v1.urls'
 
 ASGI_APPLICATION = 'depaly_v1.routing.application'
 CHANNEL_LAYERS = {
-    'default':{
-        'BACKEND':'channels.layers.InMemoryChannelLayer'
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
     }
 }
 
@@ -130,3 +130,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')  # 将static文件夹暴露给外界
 ]
+
+DEPLOY_CODE_PATH = os.path.join(BASE_DIR, 'code')
+PACKAGE_PATH = os.path.join(BASE_DIR,'package')
